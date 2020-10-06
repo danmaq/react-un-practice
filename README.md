@@ -1,2 +1,3 @@
-# react-un-practice
-Practice project that the unstated-next with Redux style data flow
+# Summary
+
+The Practice project that the Unstated-Next with Redux style data flow
