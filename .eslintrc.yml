@@ -1,0 +1,46 @@
+env:
+  es2020: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+  - react-app
+  - airbnb
+  - plugin:import/recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  - prettier/react
+parserOptions:
+  ecmaVersion: 2020
+root: true
+rules:
+  import/extensions:
+    - error
+    - ignorePackages
+    - js: never
+      jsx: never
+      ts: never
+      tsx: never
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies:
+        - '**/config-overrides.{j,t}s'
+        - '**/setupTests.{j,t}s'
+        - '**/*.config.{j,t}s'
+        - '**/*.{spec,test}.{j,t}{s,sx}'
+  react/jsx-filename-extension:
+    - error
+    - extensions:
+        - .jsx
+        - .tsx
+settings:
+  import/resolver:
+    node:
+      extensions:
+        - .js
+        - .jsx
+        - .ts
+        - .tsx
+      path:
+        - ./src
