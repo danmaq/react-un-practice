@@ -6,7 +6,7 @@ const providers: readonly Register[] = [counter];
 
 const sortedProviders = [
   ...providers.map(({ reducer }) => reducer),
-  ...providers.map(({ actions }) => actions),
+  ...providers.flatMap(({ actions }) => actions),
 ];
 
 const Contexts: React.FC = ({ children }) =>

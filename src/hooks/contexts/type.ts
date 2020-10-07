@@ -14,6 +14,6 @@ interface Payload<T> {
 }
 
 export interface Register {
-  actions: React.ComponentType<ContainerProviderProps<void>>;
+  actions: React.ComponentType<ContainerProviderProps<void>>[];
   reducer: React.ComponentType<ContainerProviderProps<void>>;
 }

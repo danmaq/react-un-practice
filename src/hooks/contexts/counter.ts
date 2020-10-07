@@ -47,6 +47,6 @@ const useActions = () => {
 export const CounterActions = createContainer(useActions);
 
 export default Object.freeze<Register>({
-  actions: CounterActions.Provider,
+  actions: [CounterActions.Provider],
   reducer: CounterReducer.Provider,
 });
