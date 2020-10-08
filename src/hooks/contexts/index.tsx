@@ -1,19 +1,19 @@
 import React from 'react';
-import counter from './counter';
-import type { Register } from './type';
+import Combine from './base/combine';
+import createCombineProps, { Register } from './base/createCombineProps';
+import counterContext from './counter';
+import fetchContext from './fetch';
 
-const providers: readonly Register[] = [counter];
+const contexts: readonly Register[] = [counterContext, fetchContext];
 
-const sortedProviders = [
-  ...providers.map(({ reducer }) => reducer),
-  ...providers.map(({ actions }) => actions),
-];
-
-const Contexts: React.FC = ({ children }) =>
-  sortedProviders.reduce(
-    (acc, Provider) => <Provider>{acc}</Provider>,
-    <>{children}</>
+const Component: React.FC = ({ children }) => {
+  const { actions, reducers } = createCombineProps(contexts);
+  return (
+    <Combine actions={actions} reducers={reducers}>
+      {children}
+    </Combine>
   );
-Contexts.displayName = 'Contexts';
+};
+Component.displayName = 'Contexts';
 
-export default Contexts;
+export default Component;
