@@ -5,7 +5,9 @@ import reducer, { add, clear } from './reducer';
 
 const getFetchTimeAsync = async () => {
   const started = Date.now();
-  await fetch(new Request('https://api.github.com/users/danmaq/repos'));
+  await (
+    await fetch(new Request('https://api.github.com/users/danmaq/repos'))
+  ).json();
   return Date.now() - started;
 };
 
