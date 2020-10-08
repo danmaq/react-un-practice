@@ -1,19 +1,19 @@
 import React from 'react';
-import counter from './counter';
+import Combine from './combine';
+import counterContext from './counter';
+import fetchContext from './fetch';
 import type { Register } from './type';
 
-const providers: readonly Register[] = [counter];
+const contexts: readonly Register[] = [counterContext, fetchContext];
 
-const sortedProviders = [
-  ...providers.map(({ reducer }) => reducer),
-  ...providers.flatMap(({ actions }) => actions),
-];
-
-const Contexts: React.FC = ({ children }) =>
-  sortedProviders.reduce(
-    (acc, Provider) => <Provider>{acc}</Provider>,
-    <>{children}</>
-  );
+const Contexts: React.FC = ({ children }) => (
+  <Combine
+    actions={contexts.flatMap(({ actions }) => actions)}
+    reducers={contexts.map(({ reducer }) => reducer)}
+  >
+    {children}
+  </Combine>
+);
 Contexts.displayName = 'Contexts';
 
 export default Contexts;
