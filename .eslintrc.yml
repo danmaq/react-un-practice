@@ -35,6 +35,8 @@ rules:
     - extensions:
         - .jsx
         - .tsx
+  react/prop-types:
+    - 'off'
 settings:
   import/resolver:
     node:
