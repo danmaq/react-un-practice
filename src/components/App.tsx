@@ -5,7 +5,8 @@ import Counter from './Counter';
 import Fetch from './Fetch';
 import './App.css';
 
-const App: React.FC = () => (
+/** ルート要素 コンポーネント。 */
+const Component: React.FC = () => (
   <Contexts>
     <div className="App">
       <header className="App-header">
@@ -17,5 +18,6 @@ const App: React.FC = () => (
     </div>
   </Contexts>
 );
+Component.displayName = 'App';
 
-export default App;
+export default Component;
