@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContainer } from 'unstated-next';
-import type { Action } from '../type';
+import type { Action } from '../base/reducerTypes';
 
 export const add = Symbol('add');
 export const set = Symbol('set');
