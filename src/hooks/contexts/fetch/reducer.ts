@@ -5,10 +5,6 @@ import type { Action } from '../base/reducerTypes';
 export const add = Symbol('add');
 export const clear = Symbol('clear');
 
-export type AddAction = Action<typeof add, Item>;
-
-export type ClearAction = Action<typeof clear>;
-
 export interface Item {
   readonly time: number;
   readonly counter: number;
@@ -20,10 +16,10 @@ export interface State {
 
 const initialState = Object.freeze<State>({ items: [] });
 
-const reducer: React.Reducer<State, AddAction | ClearAction> = (
-  state,
-  action
-) => {
+const reducer: React.Reducer<
+  State,
+  Action<typeof add, Item> | Action<typeof clear>
+> = (state, action) => {
   switch (action.type) {
     case add:
       return { ...state, items: [...state.items, action.payload] };
