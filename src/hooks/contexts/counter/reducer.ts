@@ -1,6 +1,4 @@
-import React from 'react';
-import { createContainer } from 'unstated-next';
-import type { Action } from '../base/reducerTypes';
+import createReducer, { Action } from '../base/createReducer';
 
 /** カウンターの追加を示す定数。 */
 export const add = Symbol('add');
@@ -14,27 +12,20 @@ export interface State {
   readonly counter: number;
 }
 
-/** 初期状態。 */
-const initialState = Object.freeze<State>({ counter: 0 });
-
-/** カウンター状態更新のためのリデューサー。 */
-const reducer: React.Reducer<
+export default createReducer<
   State,
   Action<typeof add> | Action<typeof set, number>
-> = (state, action) => {
-  switch (action.type) {
-    case add:
-      return { ...state, counter: state.counter + 1 };
-    case set:
-      return { ...state, counter: action.payload };
-    default:
-      return state;
-  }
-};
-
-const Container = createContainer(() =>
-  React.useReducer(reducer, initialState)
-);
-Container.Provider.displayName = '[REDUCER] Counter';
-
-export default Container;
+>({
+  initialState: { counter: 0 },
+  reducer: (state, action) => {
+    switch (action.type) {
+      case add:
+        return { ...state, counter: state.counter + 1 };
+      case set:
+        return { ...state, counter: action.payload };
+      default:
+        return state;
+    }
+  },
+  name: 'Counter',
+});
