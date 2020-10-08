@@ -1,6 +1,4 @@
-import React from 'react';
-import { createContainer } from 'unstated-next';
-import type { Action } from '../base/reducerTypes';
+import createReducer, { Action } from '../base/createReducer';
 
 export const add = Symbol('add');
 export const clear = Symbol('clear');
@@ -14,25 +12,20 @@ export interface State {
   readonly items: readonly Item[];
 }
 
-const initialState = Object.freeze<State>({ items: [] });
-
-const reducer: React.Reducer<
+export default createReducer<
   State,
   Action<typeof add, Item> | Action<typeof clear>
-> = (state, action) => {
-  switch (action.type) {
-    case add:
-      return { ...state, items: [...state.items, action.payload] };
-    case clear:
-      return { ...state, items: [] };
-    default:
-      return state;
-  }
-};
-
-const Container = createContainer(() =>
-  React.useReducer(reducer, initialState)
-);
-Container.Provider.displayName = '[REDUCER] Fetch';
-
-export default Container;
+>({
+  initialState: { items: [] },
+  reducer: (state, action) => {
+    switch (action.type) {
+      case add:
+        return { ...state, items: [...state.items, action.payload] };
+      case clear:
+        return { ...state, items: [] };
+      default:
+        return state;
+    }
+  },
+  name: 'Fetch',
+});
