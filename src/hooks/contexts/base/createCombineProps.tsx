@@ -1,18 +1,21 @@
-import type React from 'react';
-import type { ContainerProviderProps } from 'unstated-next';
-import type { Props } from './combine';
+import type { Props, Provider } from './combine';
 
 export interface Register {
-  readonly actions?: readonly React.ComponentType<ContainerProviderProps>[];
-  readonly reducer?: React.ComponentType<ContainerProviderProps>;
+  readonly actions?: Provider;
+  readonly reducer?: Provider;
 }
+
+const createProvidersGetter = (
+  selector: (register: Register) => Provider | undefined
+) => (contexts: readonly Register[]) =>
+  contexts.map(selector).filter((v): v is Provider => !!v);
+
+const getActions = createProvidersGetter(({ actions }) => actions);
+
+const getReducers = createProvidersGetter(({ reducer }) => reducer);
 
 export default (contexts: readonly Register[]) =>
   Object.freeze<Props>({
-    actions: contexts
-      .flatMap(({ actions }) => actions)
-      .filter((v): v is React.ComponentType<ContainerProviderProps> => !!v),
-    reducers: contexts
-      .map(({ reducer }) => reducer)
-      .filter((v): v is React.ComponentType<ContainerProviderProps> => !!v),
+    actions: getActions(contexts),
+    reducers: getReducers(contexts),
   });

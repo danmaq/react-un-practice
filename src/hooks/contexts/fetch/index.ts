@@ -3,6 +3,6 @@ import actions from './actions';
 import reducer from './reducer';
 
 export default Object.freeze<Register>({
-  actions: [actions.Provider],
+  actions: actions.Provider,
   reducer: reducer.Provider,
 });
