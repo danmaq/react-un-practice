@@ -1,3 +1,6 @@
+import React from 'react';
+import { createContainer } from 'unstated-next';
+
 /**
  * リデューサーへ渡す値の型定義。
  *
@@ -19,6 +22,12 @@ interface ActionType<T extends PropertyKey> {
   readonly type: T;
 }
 
+export interface CreateReducerOptions<S, A> {
+  readonly initialState: Readonly<S>;
+  readonly name: string;
+  readonly reducer: React.Reducer<S, A>;
+}
+
 /**
  * リデューサーへ渡す値における、ペイロード部分の型定義。
  * @template T ペイロードの型。
@@ -27,3 +36,11 @@ interface Payload<T> {
   /** ペイロード本体。 */
   readonly payload: T;
 }
+
+export default <S, A>(options: CreateReducerOptions<S, A>) => {
+  const { initialState, name, reducer } = options;
+  const useReducer = () => React.useReducer(reducer, initialState);
+  const Container = createContainer(useReducer);
+  Container.Provider.displayName = `[REDUCER] ${name}`;
+  return Container;
+};
