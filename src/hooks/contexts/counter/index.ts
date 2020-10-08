@@ -1,4 +1,4 @@
-import type { Register } from '../type';
+import type { Register } from '../base/createCombineProps';
 import actions from './actions';
 import reducer from './reducer';
 

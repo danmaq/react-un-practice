@@ -1,8 +1,8 @@
 import React from 'react';
 import Combine from './combine';
+import type { Register } from './base/createCombineProps';
 import counterContext from './counter';
 import fetchContext from './fetch';
-import type { Register } from './type';
 
 const contexts: readonly Register[] = [counterContext, fetchContext];
 
