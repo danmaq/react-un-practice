@@ -23,8 +23,8 @@ interface ActionType<T extends PropertyKey> {
 }
 
 export interface CreateReducerOptions<S, A> {
-  readonly initialState: Readonly<S>;
-  readonly name: string;
+  readonly initial: Readonly<S>;
+  readonly name?: string;
   readonly reducer: React.Reducer<S, A>;
 }
 
@@ -38,9 +38,10 @@ interface Payload<T> {
 }
 
 export default <S, A>(options: CreateReducerOptions<S, A>) => {
-  const { initialState, name, reducer } = options;
-  const useReducer = () => React.useReducer(reducer, initialState);
-  const Container = createContainer(useReducer);
-  Container.Provider.displayName = `[REDUCER] ${name}`;
+  const { initial, name, reducer } = options;
+  const Container = createContainer(() => React.useReducer(reducer, initial));
+  if (name) {
+    Container.Provider.displayName = `[REDUCER] ${name}`;
+  }
   return Container;
 };

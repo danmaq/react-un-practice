@@ -16,7 +16,8 @@ export default createReducer<
   State,
   Action<typeof add> | Action<typeof set, number>
 >({
-  initialState: { counter: 0 },
+  initial: { counter: 0 },
+  name: 'Counter',
   reducer: (state, action) => {
     switch (action.type) {
       case add:
@@ -27,5 +28,4 @@ export default createReducer<
         return state;
     }
   },
-  name: 'Counter',
 });

@@ -16,7 +16,8 @@ export default createReducer<
   State,
   Action<typeof add, Item> | Action<typeof clear>
 >({
-  initialState: { items: [] },
+  initial: { items: [] },
+  name: 'Fetch',
   reducer: (state, action) => {
     switch (action.type) {
       case add:
@@ -27,5 +28,4 @@ export default createReducer<
         return state;
     }
   },
-  name: 'Fetch',
 });
