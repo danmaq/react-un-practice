@@ -6,7 +6,17 @@
 
 ## サンプル解説
 
-本サンプル プロジェクトは 2 種類、合計 4 つのコンテキストを持っています。
+![スクリーンショット](https://raw.githubusercontent.com/danmaq/react-un-practice/main/public/screenshot.png)
+
+画面には Create React App のボイラープレートの他、下部にカウンター表示とログ表示、そしてそれらを操作するためのコントロール群があります。
+
+- `Set counter:` テキストボックスを編集すると、速やかにその値でカウンターの値を上書きします。
+- `+1` ボタンを押下すると、カウンターの値を +1 します。
+- `Fetch to “api.github.com”` ボタンを押下すると、GitHub API サーバーへ GET 接続し、リポジトリ一覧の JSON をダウンロード＆パースして、そのまま破棄します。
+  - この際、ダウンロードの所要時間と、カウンターの値をログに蓄積します。
+- `Clear the History` ボタンを押下すると、ログをクリアします。
+
+本サンプル プロジェクトは 2 種類、合計 4 つのコンテキストで構成しています。
 
 ![コンテキスト図解](https://raw.githubusercontent.com/danmaq/react-un-practice/main/public/context.svg)
 
