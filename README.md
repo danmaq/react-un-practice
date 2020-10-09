@@ -4,6 +4,15 @@
 
 [Create React App](https://create-react-app.dev) のボイラープレートをベースとして、コンテキスト上の状態操作コントロールを追加しています。
 
+## 使い方
+
+```sh
+git clone https://github.com/danmaq/react-un-practice.git
+cd react-un-practice
+npm ci
+npm start
+```
+
 ## サンプル解説
 
 ![スクリーンショット](https://raw.githubusercontent.com/danmaq/react-un-practice/main/public/screenshot.png)
