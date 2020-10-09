@@ -1,0 +1,34 @@
+@startuml context
+
+() Components
+
+
+interface counter.Actions {
+  void add()
+  void set()
+}
+
+interface counter.Reducer {
+  number counter
+  void dispatch()
+}
+
+interface fetch.Actions {
+  void addAsync()
+  void clear()
+}
+
+interface fetch.Reducer {
+  Item[] items
+  void dispatch()
+}
+
+counter.Actions <-- Components : call
+fetch.Actions <-- Components : call
+
+counter.Reducer <-- counter.Actions : dispatch
+fetch.Reducer <-- fetch.Actions : dispatch
+counter.Reducer <.. fetch.Actions : read
+
+
+@enduml

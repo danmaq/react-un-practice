@@ -1,6 +1,4 @@
-@startuml
-
-title architecture
+@startuml architecture
 
 frame "Context" {
   [actions]
@@ -13,14 +11,14 @@ frame "Component" {
   [Combine] <<jsx>>
 }
 
-Combine "1" -up-* Root
-Children "1..*" -up-* Combine
+Root *-- "1..1" Combine
+Combine *-- "1..*" Children
 
-actions .up.> reducer
+reducer <.. actions
 
-reducer "1..*" -left-* Combine
-actions "1..*" --* Combine
+Combine *- "1..*" reducer
+Combine *- "1..*" actions
 
-Children .left.> actions
+Children .> actions
 
 @enduml

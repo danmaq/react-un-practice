@@ -216,3 +216,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,vim,visualstudiocode,windows
+
+##########################################################################
+### User definition settings #############################################
+##########################################################################
+
+### Create React App ###
+/build
