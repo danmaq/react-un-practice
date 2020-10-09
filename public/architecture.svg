@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="386px" preserveAspectRatio="none" style="width:277px;height:386px;" version="1.1" viewBox="0 0 277 386" width="277px" zoomAndPan="magnify"><defs><filter height="300%" id="fz910byro1lhl" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="103" x="98.5" y="17.4023">architecture</text><!--MD5=[834e98962f20b09c78cd8e6ce75813d5]
+cluster Context--><rect fill="#FFFFFF" filter="url(#fz910byro1lhl)" height="200" style="stroke: #000000; stroke-width: 1.5;" width="106" x="22" y="166.6992"/><path d="M88,167.6992 L88,176.1875 L78,186.1875 L22,186.1875 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="56" x="25" y="181.2344">Context</text><!--MD5=[b83664a7e18115e1a5047ee67f7a3675]
+cluster Component--><rect fill="#FFFFFF" filter="url(#fz910byro1lhl)" height="330" style="stroke: #000000; stroke-width: 1.5;" width="114" x="152" y="45.1992"/><path d="M245,46.1992 L245,54.6875 L235,64.6875 L152,64.6875 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="83" x="155" y="59.7344">Component</text><!--MD5=[66f9f88c9fb598cb139af963a53d9228]
+entity actions--><rect fill="#FEFECE" filter="url(#fz910byro1lhl)" height="36.4883" style="stroke: #A80036; stroke-width: 1.5;" width="69" x="42.5" y="314.6992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="37.5" y="319.6992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="37.5" y="341.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="52.5" y="338.2344">actions</text><!--MD5=[aa8ae5f8b669b19a650718ce92f6ba5c]
+entity reducer--><rect fill="#FEFECE" filter="url(#fz910byro1lhl)" height="36.4883" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="38.5" y="201.6992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="33.5" y="206.6992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="33.5" y="228.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="48.5" y="225.2344">reducer</text><!--MD5=[684d6514d27743a5b20ad0d8befdb98d]
+entity Root--><rect fill="#FEFECE" filter="url(#fz910byro1lhl)" height="52.9766" style="stroke: #A80036; stroke-width: 1.5;" width="54" x="182" y="80.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="177" y="85.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="177" y="123.1758"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="34" x="192" y="103.7344">«jsx»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="193" y="120.2227">Root</text><!--MD5=[09cf16c0e8839602fe5654c71a220710]
+entity Children--><rect fill="#FEFECE" filter="url(#fz910byro1lhl)" height="52.9766" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="168.5" y="306.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="163.5" y="311.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="163.5" y="349.1758"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="34" x="191" y="329.7344">«jsx»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="178.5" y="346.2227">Children</text><!--MD5=[661376cd0028836f8491afcff8949b6d]
+entity Combine--><rect fill="#FEFECE" filter="url(#fz910byro1lhl)" height="52.9766" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="168" y="193.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="163" y="198.1992"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="163" y="236.1758"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="34" x="192" y="216.7344">«jsx»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="178" y="233.2227">Combine</text><!--MD5=[c7189a0f3e61ea3057d7dc51fd62b405]
+reverse link Root to Combine--><path d="M209,146.8692 C209,162.2192 209,179.3892 209,193.0892 " fill="none" id="Root&lt;-Combine" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="209,133.4392,205,139.4392,209,145.4392,213,139.4392,209,133.4392" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="200.025" y="182.384">1</text><!--MD5=[671466f6fe26b01583bd6580e3c23478]
+reverse link Combine to Children--><path d="M208.65,259.8692 C208.51,275.2192 208.35,292.3892 208.23,306.0892 " fill="none" id="Combine&lt;-Children" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="208.77,246.4392,204.7109,252.3994,208.6513,258.4386,212.7105,252.4785,208.77,246.4392" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="183.6048" y="295.384">1..*</text><!--MD5=[b977d07e626916e9d0b8d3dbcf184ef6]
+reverse link reducer to actions--><path d="M75.4,243.1692 C75.78,264.2492 76.34,295.2992 76.69,314.4792 " fill="none" id="reducer&lt;-actions" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="75.31,238.0392,71.4649,247.1065,75.3957,243.0385,79.4637,246.9693,75.31,238.0392" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[0470844c824be2f938278161a0a5ebfa]
+reverse link Combine to reducer--><path d="M154.73,219.6992 C140.37,219.6992 126.01,219.6992 111.64,219.6992 " fill="none" id="Combine&lt;-reducer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="167.93,219.6992,161.93,215.6992,155.93,219.6992,161.93,223.6992,167.93,219.6992" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="119.5304" y="216.0107">1..*</text><!--MD5=[0a8873b93e331bbd9eb5ed88664e5017]
+link actions to Combine--><path d="M97.59,314.3892 C116.45,298.5192 144.92,274.5892 168.36,254.8792 " fill="none" id="actions-&gt;Combine" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="178.38,246.4392,171.2132,247.2377,169.1939,254.1603,176.3606,253.3618,178.38,246.4392" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="78.5269" y="304.0261">1..*</text><!--MD5=[07e94ad38bb1781504efcec4a0bf7225]
+reverse link actions to Children--><path d="M116.87,332.6992 C134.06,332.6992 151.25,332.6992 168.44,332.6992 " fill="none" id="actions&lt;-Children" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="111.54,332.6992,120.54,336.6992,116.54,332.6992,120.54,328.6992,111.54,332.6992" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a8a10ead745f876c42a59dcda6868c50]
+@startuml
+
+title architecture
+
+frame "Context" {
+  [actions]
+  [reducer]
+}
+
+frame "Component" {
+  [Root] <<jsx>>
+  [Children] <<jsx>>
+  [Combine] <<jsx>>
+}
+
+Combine "1" -up-* Root
+Children "1..*" -up-* Combine
+
+actions .up.> reducer
+
+reducer "1..*" -left-* Combine
+actions "1..*" - -* Combine
+
+Children .left.> actions
+
+@enduml
+
+PlantUML version 1.2020.10(Sun May 17 18:35:57 JST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 15+36
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

@@ -1,0 +1,26 @@
+@startuml
+
+title architecture
+
+frame "Context" {
+  [actions]
+  [reducer]
+}
+
+frame "Component" {
+  [Root] <<jsx>>
+  [Children] <<jsx>>
+  [Combine] <<jsx>>
+}
+
+Combine "1" -up-* Root
+Children "1..*" -up-* Combine
+
+actions .up.> reducer
+
+reducer "1..*" -left-* Combine
+actions "1..*" --* Combine
+
+Children .left.> actions
+
+@enduml
