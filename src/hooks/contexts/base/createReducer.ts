@@ -22,9 +22,21 @@ interface ActionType<T extends PropertyKey> {
   readonly type: T;
 }
 
+/**
+ * リデューサー コンテキストを作成するためのオプション一覧。
+ * @template S 状態の型。
+ * @template A アクションの型。
+ */
 export interface CreateReducerOptions<S, A> {
+  /** 初期状態。 */
   readonly initial: Readonly<S>;
+  /**
+   * コンテキストをラッピングする、コンポーネント名。
+   *
+   * 省略しても問題ありませんが、デバッグ時に有用です。
+   */
   readonly name?: string;
+  /** リデューサー関数。 */
   readonly reducer: React.Reducer<S, A>;
 }
 
@@ -37,6 +49,12 @@ interface Payload<T> {
   readonly payload: T;
 }
 
+/**
+ * リデューサー コンテキストを作成します。
+ * @template S 状態の型。
+ * @template A アクションの型。
+ * @param options オプション一覧。
+ */
 export default <S, A>(options: CreateReducerOptions<S, A>) => {
   const { initial, name, reducer } = options;
   const Container = createContainer(() => React.useReducer(reducer, initial));

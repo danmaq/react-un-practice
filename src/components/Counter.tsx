@@ -40,7 +40,7 @@ DOM.displayName = 'CounterDOM';
 const useSideEffect = () => {
   // ここでは Actions・Reducer 双方にアクセスできる。
   // Reducer への直接 Dispatch も一応可能だが、Actions を介する方が行儀良い。
-  const { add, set } = counterActions.useContainer();
+  const { increment, set } = counterActions.useContainer();
   const [{ counter }] = counterReducer.useContainer();
   return Object.freeze<DOMProps>({
     counter,
@@ -48,7 +48,7 @@ const useSideEffect = () => {
       (e) => set(Number.parseInt(e.currentTarget.value, 10)),
       [set]
     ),
-    onClickAdd: add,
+    onClickAdd: increment,
   });
 };
 
