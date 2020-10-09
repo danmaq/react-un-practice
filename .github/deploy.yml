@@ -1,0 +1,32 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Using Node.js 14.x
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14.x
+      - name: Caching the dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install the dependencies
+        run: npm ci --no-optional --unsafe-perm
+      - name: Building
+        run: npm run build
+      - name: Deploying
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/web/public
