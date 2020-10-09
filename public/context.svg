@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="436px" preserveAspectRatio="none" style="width:333px;height:436px;" version="1.1" viewBox="0 0 333 436" width="333px" zoomAndPan="magnify"><defs><filter height="300%" id="fa10ig94zenn0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[1da1b19ed129c99081a80d1a9939d88e]
+cluster counter--><polygon fill="#FFFFFF" filter="url(#fa10ig94zenn0)" points="22,24,82,24,89,46.4883,154,46.4883,154,300,22,300,22,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="89" y1="46.4883" y2="46.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="54" x="26" y="39.5352">counter</text><!--MD5=[4e9a3058714acd5d07968f2bb887f0c3]
+cluster fetch--><polygon fill="#FFFFFF" filter="url(#fa10ig94zenn0)" points="179,24,221,24,228,46.4883,311,46.4883,311,300,179,300,179,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="179" x2="228" y1="46.4883" y2="46.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="183" y="39.5352">fetch</text><!--MD5=[592b21a0ea46bee31429bc4e9cc25ebb]
+class counter.Actions--><rect fill="#FEFECE" filter="url(#fa10ig94zenn0)" height="73.9102" id="counter.Actions" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="51.5" y="210"/><ellipse cx="66.5" cy="226" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M62.9277,222.2651 L62.9277,220.1069 L70.3071,220.1069 L70.3071,222.2651 L67.8418,222.2651 L67.8418,230.3418 L70.3071,230.3418 L70.3071,232.5 L62.9277,232.5 L62.9277,230.3418 L65.3931,230.3418 L65.3931,222.2651 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="41" x="80.5" y="230.5352">Actions</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="52.5" x2="123.5" y1="242" y2="242"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="52.5" x2="123.5" y1="250" y2="250"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="57.5" y="264.6348">void add()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="57.5" y="277.5898">void set()</text><!--MD5=[53193712d1c59b2a5c6d8179baf478a6]
+class counter.Reducer--><rect fill="#FEFECE" filter="url(#fa10ig94zenn0)" height="73.9102" id="counter.Reducer" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="38.5" y="59"/><ellipse cx="62.05" cy="75" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M58.4777,71.2651 L58.4777,69.1069 L65.8571,69.1069 L65.8571,71.2651 L63.3918,71.2651 L63.3918,79.3418 L65.8571,79.3418 L65.8571,81.5 L58.4777,81.5 L58.4777,79.3418 L60.9431,79.3418 L60.9431,71.2651 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="48" x="77.95" y="79.5352">Reducer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="39.5" x2="136.5" y1="91" y2="91"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="44.5" y="105.6348">number counter</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="39.5" x2="136.5" y1="111.9551" y2="111.9551"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="44.5" y="126.5898">void dispatch()</text><!--MD5=[53da3611e57b5eef3260e176b4023505]
+class fetch.Actions--><rect fill="#FEFECE" filter="url(#fa10ig94zenn0)" height="73.9102" id="fetch.Actions" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="195.5" y="210"/><ellipse cx="222.2" cy="226" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M218.6277,222.2651 L218.6277,220.1069 L226.0071,220.1069 L226.0071,222.2651 L223.5418,222.2651 L223.5418,230.3418 L226.0071,230.3418 L226.0071,232.5 L218.6277,232.5 L218.6277,230.3418 L221.0931,230.3418 L221.0931,222.2651 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="41" x="238.8" y="230.5352">Actions</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="196.5" x2="293.5" y1="242" y2="242"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="196.5" x2="293.5" y1="250" y2="250"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="201.5" y="264.6348">void addAsync()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="201.5" y="277.5898">void clear()</text><!--MD5=[2b99f7974a9eed8f8935e5b510143c29]
+class fetch.Reducer--><rect fill="#FEFECE" filter="url(#fa10ig94zenn0)" height="73.9102" id="fetch.Reducer" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="195" y="59"/><ellipse cx="215.4" cy="75" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M211.8277,71.2651 L211.8277,69.1069 L219.2071,69.1069 L219.2071,71.2651 L216.7418,71.2651 L216.7418,79.3418 L219.2071,79.3418 L219.2071,81.5 L211.8277,81.5 L211.8277,79.3418 L214.2931,79.3418 L214.2931,71.2651 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="48" x="230.6" y="79.5352">Reducer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="196" x2="286" y1="91" y2="91"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="201" y="105.6348">Item[] items</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="196" x2="286" y1="111.9551" y2="111.9551"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="201" y="126.5898">void dispatch()</text><!--MD5=[613a5f83bb186de76f3e931830c1e5f7]
+entity Components--><ellipse cx="166" cy="392" fill="#FEFECE" filter="url(#fa10ig94zenn0)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="122" y="422.5352">Components</text><!--MD5=[d7407b65ed607e9342f0f340419abd6b]
+reverse link counter.Actions to Components--><path d="M110.28,288.85 C128.19,321.68 151.91,365.16 161.59,382.92 " fill="none" id="counter.Actions&lt;-Components" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="107.68,284.08,108.4669,293.8974,110.0692,288.4722,115.4944,290.0746,107.68,284.08" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="134" y="329.5684">call</text><!--MD5=[706d48426bd039f9bb402e49eb02457e]
+reverse link fetch.Actions to Components--><path d="M222.43,288.85 C204.29,321.68 180.28,365.16 170.46,382.92 " fill="none" id="fetch.Actions&lt;-Components" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="225.06,284.08,217.2074,290.0245,222.6427,288.4568,224.2104,293.8921,225.06,284.08" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="206" y="329.5684">call</text><!--MD5=[b6e1ad49f332bfc5aa4217f1cc00ca8a]
+reverse link counter.Reducer to counter.Actions--><path d="M75.66,138.33 C73.72,146.44 72.02,154.93 71,163 C69.04,178.47 71.62,195.36 75.31,209.84 " fill="none" id="counter.Reducer&lt;-counter.Actions" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="76.89,133.34,70.8481,141.1179,75.6908,138.1941,78.6146,143.0367,76.89,133.34" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="54" x="72" y="176.5684">dispatch</text><!--MD5=[5cbfaa05dca282d39417c3132ea2ad2f]
+reverse link fetch.Reducer to fetch.Actions--><path d="M242.1,138.07 C242.71,160.53 243.45,188.09 244.03,209.75 " fill="none" id="fetch.Reducer&lt;-fetch.Actions" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="241.97,133.07,238.2027,142.1698,242.0985,138.0683,246.2,141.9642,241.97,133.07" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="54" x="244" y="176.5684">dispatch</text><!--MD5=[6208745bb489e21e7135967162265fcc]
+reverse link counter.Reducer to fetch.Actions--><path d="M129.79,136.66 C153.71,159.37 183.51,187.64 206.8,209.75 " fill="none" id="counter.Reducer&lt;-fetch.Actions" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="126.01,133.07,129.7856,142.1664,129.6371,136.5115,135.292,136.363,126.01,133.07" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="27" x="172" y="176.5684">read</text><!--MD5=[edea9439f0caf0c62a4e689a2610fedb]
+@startuml context
+
+() Components
+
+
+interface counter.Actions {
+  void add()
+  void set()
+}
+
+interface counter.Reducer {
+  number counter
+  void dispatch()
+}
+
+interface fetch.Actions {
+  void addAsync()
+  void clear()
+}
+
+interface fetch.Reducer {
+  Item[] items
+  void dispatch()
+}
+
+counter.Actions <- - Components : call
+fetch.Actions <- - Components : call
+
+counter.Reducer <- - counter.Actions : dispatch
+fetch.Reducer <- - fetch.Actions : dispatch
+counter.Reducer <.. fetch.Actions : read
+
+
+@enduml
+
+PlantUML version 1.2020.10(Sun May 17 18:35:57 JST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 15+36
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>
