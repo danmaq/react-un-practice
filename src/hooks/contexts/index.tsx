@@ -1,6 +1,6 @@
 import React from 'react';
-import Combine from './base/Combine';
-import createCombineProps from './base/createCombineProps';
+import CombinedContexts from './base/Combine';
+import order from './base/order';
 import counterContext from './counter';
 import fetchContext from './fetch';
 
@@ -12,17 +12,12 @@ import fetchContext from './fetch';
  * 同一ヒエラルキーのコンテキストを参照したい場合、
  * 参照対象より末尾に指定します。
  */
-const props = createCombineProps(counterContext, fetchContext);
+const providers = order(counterContext, fetchContext);
 
 /** コンテキスト一覧をレンダリング ツリーに結合するための HOC。 */
-const Component: React.FC = ({ children }) => {
-  const { actions, reducers } = props;
-  return (
-    <Combine actions={actions} reducers={reducers}>
-      {children}
-    </Combine>
-  );
-};
+const Component: React.FC = ({ children }) => (
+  <CombinedContexts providers={providers}>{children}</CombinedContexts>
+);
 Component.displayName = 'Contexts';
 
 export default Component;
