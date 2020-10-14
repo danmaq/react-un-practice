@@ -1,6 +1,4 @@
-import createSortedFlatten, {
-  Layer,
-} from '../../../logics/createSortedFlatten';
+import renderLayers, { Layer } from '../../../logics/renderLayers';
 
 /** リデューサー コンテキストのレイヤーを示す定数。 */
 export const REDUCER = Symbol('reducer');
@@ -24,4 +22,4 @@ const orderRule = [REDUCER, ACTIONS, INTEGRATED] as const;
  */
 export type ConcretedLayer<T> = Layer<typeof orderRule[number], T>;
 
-export default createSortedFlatten(orderRule);
+export default renderLayers(orderRule);
