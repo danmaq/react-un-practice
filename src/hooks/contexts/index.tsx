@@ -3,6 +3,7 @@ import CombinedContexts from './base/Combine';
 import order from './base/order';
 import counterContext from './counter';
 import fetchContext from './fetch';
+import fooContext from './foo';
 
 /**
  * コンテキスト一覧。
@@ -12,7 +13,7 @@ import fetchContext from './fetch';
  * 同一ヒエラルキーのコンテキストを参照したい場合、
  * 参照対象より末尾に指定します。
  */
-const providers = order(counterContext, fetchContext);
+const providers = order(counterContext, fetchContext, fooContext);
 
 /** コンテキスト一覧をレンダリング ツリーに結合するための HOC。 */
 const Component: React.FC = ({ children }) => (
