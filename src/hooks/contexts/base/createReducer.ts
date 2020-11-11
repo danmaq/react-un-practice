@@ -1,6 +1,10 @@
 import isEqual from 'lodash/isEqual';
 import React from 'react';
-import { createContainer } from 'unstated-next';
+import { createContainer, Container } from 'unstated-next';
+
+/** 抽象化したリデューサー関数における、型定義のシノニム。 */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AbstractReducer = React.Reducer<any, any>;
 
 /**
  * リデューサーへ渡す値の型定義。
@@ -34,12 +38,10 @@ interface ActionType<T> {
 }
 
 /**
- * リデューサー コンテキストを作成するためのオプション一覧。
+ * リデューサー コンテキストを作成するための、任意のオプション一覧。
  * @template R リデューサー関数の型。
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface CreateReducerOptions<R extends React.Reducer<any, any>>
-  extends ReducerSource<R> {
+export interface Options {
   /**
    * 状態を更新するために深い比較を用いるかどうか。
    *
@@ -58,13 +60,26 @@ export interface CreateReducerOptions<R extends React.Reducer<any, any>>
  * リデューサー関数と初期状態とのペア。
  * @template R リデューサー関数の型。
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface ReducerSource<R extends React.Reducer<any, any>> {
+export interface Source<R extends AbstractReducer> {
   /** 初期状態。 */
   readonly initial: React.ReducerState<R>;
   /** リデューサー関数。 */
   readonly reducer: R;
 }
+
+/**
+ * 状態のプロパティーにアクセスします。
+ * @template S 状態の型。
+ * @param container コンテナー。
+ * @param key 状態のプロパティ名。
+ */
+export const useReducerState = <S, K extends keyof S>(
+  container: Container<[S, unknown], void>,
+  key: K
+) => {
+  const [state] = container.useContainer();
+  return state[key];
+};
 
 /**
  * 状態の深い比較をし、相違があるなら新しい状態、そうでないなら古い状態を取得します。
@@ -94,13 +109,13 @@ const deepReducer = <S, A>(reducer: React.Reducer<S, A>) =>
  * @template A アクションの型。
  * @param options オプション一覧。
  */
-export default <S, A>(options: CreateReducerOptions<React.Reducer<S, A>>) => {
+export default <S, A>(options: Options & Source<React.Reducer<S, A>>) => {
   const { deepEquals, initial, name, reducer } = options;
-  const Container = createContainer(() =>
+  const container = createContainer(() =>
     React.useReducer(deepEquals ? deepReducer(reducer) : reducer, initial)
   );
   if (name) {
-    Container.Provider.displayName = `[REDUCER] ${name}`;
+    container.Provider.displayName = `[REDUCER] ${name}`;
   }
-  return Container;
+  return container;
 };
