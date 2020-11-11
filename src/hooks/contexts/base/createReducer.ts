@@ -35,26 +35,35 @@ interface ActionType<T> {
 
 /**
  * リデューサー コンテキストを作成するためのオプション一覧。
- * @template S 状態の型。
- * @template A アクションの型。
+ * @template R リデューサー関数の型。
  */
-export interface CreateReducerOptions<S, A> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface CreateReducerOptions<R extends React.Reducer<any, any>>
+  extends ReducerSource<R> {
   /**
    * 状態を更新するために深い比較を用いるかどうか。
    *
    * 省略時や `false` 指定時は、React 既定の浅い比較を用います。
    */
   readonly deepEquals?: boolean;
-  /** 初期状態。 */
-  readonly initial: Readonly<S>;
   /**
    * コンテキストをラッピングする、コンポーネント名。
    *
    * 省略しても問題ありませんが、デバッグ時に有用です。
    */
   readonly name?: string;
+}
+
+/**
+ * リデューサー関数と初期状態とのペア。
+ * @template R リデューサー関数の型。
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface ReducerSource<R extends React.Reducer<any, any>> {
+  /** 初期状態。 */
+  readonly initial: React.ReducerState<R>;
   /** リデューサー関数。 */
-  readonly reducer: React.Reducer<S, A>;
+  readonly reducer: R;
 }
 
 /**
@@ -85,7 +94,7 @@ const deepReducer = <S, A>(reducer: React.Reducer<S, A>) =>
  * @template A アクションの型。
  * @param options オプション一覧。
  */
-export default <S, A>(options: CreateReducerOptions<S, A>) => {
+export default <S, A>(options: CreateReducerOptions<React.Reducer<S, A>>) => {
   const { deepEquals, initial, name, reducer } = options;
   const Container = createContainer(() =>
     React.useReducer(deepEquals ? deepReducer(reducer) : reducer, initial)

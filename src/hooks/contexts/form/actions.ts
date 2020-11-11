@@ -1,19 +1,26 @@
 import React from 'react';
 import { createContainer } from 'unstated-next';
-import reducer, { increment, set } from './reducer';
+import reducer from './reducer';
+import { increment, set as setCounter } from './reducer/counter';
+import { set as setText } from './reducer/text';
 
-/** カウンターにおける、アクションの型定義。 */
+/** フォームにおける、アクションの型定義。 */
 export interface Actions {
   /** カウンターをインクリメントします。 */
   readonly increment: () => void;
   /** カウンターを指定の値で上書きします。 */
-  readonly set: (
+  readonly setCounter: (
     /** 値。 */
     value: number
   ) => void;
+  /** カウンターを指定の値で上書きします。 */
+  readonly setText: (
+    /** 値。 */
+    value: string
+  ) => void;
 }
 
-/** カウンターにおける、アクションを作成します。 */
+/** フォームにおける、アクションを作成します。 */
 const useActions = () => {
   // see: https://ja.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often
   // > useReducer から返される dispatch 関数は常に同一性が保たれます。
@@ -23,15 +30,19 @@ const useActions = () => {
     increment: React.useCallback(() => dispatch({ type: increment }), [
       dispatch,
     ]),
-    set: React.useCallback(
-      (value: number) => dispatch({ type: set, payload: value }),
+    setCounter: React.useCallback(
+      (value: number) => dispatch({ type: setCounter, payload: value }),
+      [dispatch]
+    ),
+    setText: React.useCallback(
+      (value: string) => dispatch({ type: setText, payload: value }),
       [dispatch]
     ),
   });
 };
 
-/** カウンターにおける、アクション コンテキスト。 */
+/** フォームにおける、アクション コンテキスト。 */
 const Container = createContainer(useActions);
-Container.Provider.displayName = 'CounterAction';
+Container.Provider.displayName = 'FormAction';
 
 export default Container;
