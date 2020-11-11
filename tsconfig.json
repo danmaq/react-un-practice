@@ -4,23 +4,19 @@
     "strict": true,
     "module": "esnext",
     "jsx": "react",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    // see: https://github.com/facebook/create-react-app/issues/9429
+    "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true
   },
   "exclude": [],
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
