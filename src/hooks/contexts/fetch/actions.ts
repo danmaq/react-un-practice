@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContainer } from 'unstated-next';
-import counterReducer from '../counter/reducer';
+import formReducer from '../form/reducer';
 import reducer, { add, clear } from './reducer';
 
 /** フェッチ ログにおける、アクションの型定義。 */
@@ -23,7 +23,7 @@ const timeAsync = async () => {
 
 /** フェッチ ログにおける、アクションを作成します。 */
 const useActions = () => {
-  const [{ counter }] = counterReducer.useContainer();
+  const [{ counter }] = formReducer.useContainer();
   // see: https://ja.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often
   // > useReducer から返される dispatch 関数は常に同一性が保たれます。
   // この主張を信用し、各メモ化工程で dispatch を deps 指定しています。
@@ -31,8 +31,11 @@ const useActions = () => {
   return Object.freeze<Actions>({
     addAsync: React.useCallback(
       async () =>
-        dispatch({ type: add, payload: { time: await timeAsync(), counter } }),
-      [counter, dispatch]
+        dispatch({
+          type: add,
+          payload: { time: await timeAsync(), counter: counter.counter },
+        }),
+      [counter.counter, dispatch]
     ),
     clear: React.useCallback(() => dispatch({ type: clear }), [dispatch]),
   });
