@@ -1,6 +1,6 @@
 import React from 'react';
 import actions from '../hooks/contexts/form/actions';
-import reducer from '../hooks/contexts/form/reducer';
+import { useCounter, useText } from '../hooks/contexts/form/reducer';
 import type { WithoutChildren } from './types';
 
 /** DOM 要素のための型定義。 */
@@ -65,9 +65,10 @@ const useSideEffect = () => {
   // ここでは Actions・Reducer 双方にアクセスできる。
   // Reducer への直接 Dispatch も一応可能だが、Actions を介する方が行儀良い。
   const { increment, setCounter, setText } = actions.useContainer();
-  const [{ counter, text }] = reducer.useContainer();
+  const { counter } = useCounter();
+  const { text } = useText();
   return Object.freeze<DOMProps>({
-    counter: counter.counter,
+    counter,
     onChangeCounter: React.useCallback(
       (e) => setCounter(Number.parseInt(e.currentTarget.value, 10)),
       [setCounter]
@@ -76,7 +77,7 @@ const useSideEffect = () => {
       setText,
     ]),
     onClickAdd: increment,
-    text: text.text,
+    text,
   });
 };
 
