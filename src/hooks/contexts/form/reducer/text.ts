@@ -1,5 +1,5 @@
 import type React from 'react';
-import type { Action, ReducerSource } from '../../base/createReducer';
+import type { Action, Source } from '../../base/createReducer';
 
 /** 文字列の上書きを示す、識別定数。 */
 export const set = Symbol('set');
@@ -27,7 +27,7 @@ const reducer: React.Reducer<TextState, TextAction> = (state, action) => {
   }
 };
 
-export default Object.freeze<ReducerSource<typeof reducer>>({
+export default Object.freeze<Source<typeof reducer>>({
   initial: { text: '' },
   reducer,
 });
