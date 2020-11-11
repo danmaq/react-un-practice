@@ -1,5 +1,5 @@
 import type React from 'react';
-import type { Action, ReducerSource } from '../../base/createReducer';
+import type { Action, Source } from '../../base/createReducer';
 
 /** カウンターのインクリメントを示す、識別定数。 */
 export const increment = Symbol('increment');
@@ -34,7 +34,7 @@ const reducer: React.Reducer<CounterState, CounterAction> = (state, action) => {
   }
 };
 
-export default Object.freeze<ReducerSource<typeof reducer>>({
+export default Object.freeze<Source<typeof reducer>>({
   initial: { counter: 0 },
   reducer,
 });
