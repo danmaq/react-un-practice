@@ -2,3 +2,4 @@ build
 *.css
 *.json
 *.svg
+.eslintrc.yml

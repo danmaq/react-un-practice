@@ -1,11 +1,7 @@
-/** カウンターのインクリメントを示す、識別定数。 */
-export const increment = Symbol('increment');
+export type Counter = number;
 
-/** カウンターの上書きを示す、識別定数。 */
-export const set = Symbol('set');
+/** カウンター値をインクリメントします。 */
+export const increment = (value: Counter) => value + 1;
 
-/** カウンターの状態における、型定義。 */
-export interface Counter {
-  /** カウンター。 */
-  readonly counter: number;
-}
+/** カウンター値を設定します。 */
+export const set = (value: Counter) => value;
